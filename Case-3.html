@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Case 2</title> 
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body, html {
+                height: 100%;
+                display: block;
+                position: relative;
+            }
+
+            body {
+                display: block;
+                position: relative;
+                height: 100%;
+            }
+
+            body > div {
+                position: absolute;
+                width: 150px;
+                aspect-ratio: 1/1;
+                background-color: grey;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            body > div > div {
+                position: absolute;
+                width: 130px;
+                aspect-ratio: 1/1;
+                background-color: red;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            body > div > div > div {
+                position: absolute;
+                width: 110px;
+                aspect-ratio: 1/1;
+                background-color: purple;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            h3 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0;
+
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <div>
+                    <h3>Hello</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
