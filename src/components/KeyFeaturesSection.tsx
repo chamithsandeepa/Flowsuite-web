@@ -4,10 +4,10 @@ const KeyFeaturesSection = () => {
   const features = [
     {
       id: "inventory",
-      title: "Stay In Control Of Your",
-      titleHighlight: "Inventory With Our Smart Management System",
+      title: "Take Full Control of Your",
+      titleHighlight: "Inventory Smart. Seamless. Stock-Savvy.",
       description:
-        "Track materials, monitor stock levels, and automate reordering processes to ensure your production never stops due to supply shortages.",
+        "Keep your materials in check, monitor stock levels in real-time, and automate reorders so your production never misses a beat.",
       image: "/images/workflow-image.png",
       imageAlt: "Inventory Management System",
       imageFirst: true,
@@ -18,10 +18,10 @@ const KeyFeaturesSection = () => {
     },
     {
       id: "quality",
-      title: "Ensure Consistent Quality with",
-      titleHighlight: "Built-in Quality Assurance",
+      title: "Deliver Excellence Every Time",
+      titleHighlight: "Smart Quality Checks Built Into Your Workflow",
       description:
-        "Implement systematic quality checks at every stage of production to maintain high standards and reduce defects.",
+        "Keep your production flawless with intelligent, stage-by-stage quality monitoring that ensures every product meets your high standards.",
       image: "/images/quality-ensure.png",
       imageAlt: "Quality Assurance System",
       imageFirst: false,
