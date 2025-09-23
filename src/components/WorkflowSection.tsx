@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 const WorkflowSection = () => {
   const workflowSteps = [
-    { name: "Order", completed: true },
-    { name: "Design", completed: true },
-    { name: "Cutting", completed: true },
-    { name: "Printing", completed: true },
-    { name: "Pressing", completed: true },
+    { name: "Handles customer order", completed: true },
+    { name: "Creative design", completed: true },
+    { name: "Cutting section", completed: true },
+    { name: " Applies prints", completed: true },
+    { name: "Finishing & Pressing", completed: true },
     { name: "Sewing", completed: true },
-    { name: "Packing", completed: true },
+    { name: "Packaging & Dispatch", completed: true },
   ];
 
   return (
