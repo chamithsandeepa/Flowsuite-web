@@ -60,10 +60,10 @@ const FeatureSection = () => {
           transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <p className="text-lg text-gray-600 leading-relaxed">
-            With a user-friendly interface and powerful analytics, our system
-            provides comprehensive insights into your production workflow,
-            enabling better decision-making and improved operational efficiency.
+          <p className="text-lg text-gray-600 leading-relaxed px-4">
+            Empower your production journey with an intuitive interface and
+            advanced analytics unlock real-time insights, drive smarter
+            decisions, and elevate your operational performance to new heights.
           </p>
         </motion.div>
       </div>
