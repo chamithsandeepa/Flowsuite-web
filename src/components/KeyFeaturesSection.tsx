@@ -1,190 +1,194 @@
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 
-const KeyFeaturesSection = () => {
+interface InvoicingSystemSectionProps {}
+
+const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
   const features = [
-    {
-      id: "inventory",
-      title: "Take Full Control of Your",
-      titleHighlight: "Inventory Smart. Seamless. Stock-Savvy.",
-      description:
-        "Keep your materials in check, monitor stock levels in real-time, and automate reorders so your production never misses a beat.",
-      image: "/images/workflow-image.png",
-      imageAlt: "Inventory Management System",
-      imageFirst: true,
-      points: [
-        "Unlimited Item & Category Management ",
-        "Bill of Materials (BoM) Support",
-      ],
-    },
-    {
-      id: "quality",
-      title: "Deliver Excellence Every Time",
-      titleHighlight: "Smart Quality Checks Built Into Your Workflow",
-      description:
-        "Keep your production flawless with intelligent, stage-by-stage quality monitoring that ensures every product meets your high standards.",
-      image: "/images/quality-ensure.png",
-      imageAlt: "Quality Assurance System",
-      imageFirst: false,
-      points: [
-        "Inspection Point Tracking",
-        "Defect Classification System",
-        "Quality Metrics Dashboard",
-      ],
-    },
-    {
-      id: "reports",
-      title: "Make Smarter Decisions With",
-      titleHighlight: "Comprehensive Data Reports",
-      description:
-        "Access detailed analytics and reports to identify bottlenecks, optimize processes, and make data-driven decisions for your business.",
-      image: "/images/data-reports.png",
-      imageAlt: "Data Reports and Analytics",
-      imageFirst: true,
-      points: [
-        "Production Analytics",
-        "Performance Metrics",
-        "Custom Report Builder",
-      ],
-    },
-    {
-      id: "mobile",
-      title: "Your Whole Business On",
-      titleHighlight: "Beautifully Designed Mobile Dashboards",
-      description:
-        "Access your complete business overview from anywhere with our responsive mobile interface designed for on-the-go management.",
-      image: "/images/business-on-dashboard.png",
-      imageAlt: "Mobile Dashboard",
-      imageFirst: false,
-      points: [
-        "Unlimited Item & Category Management ",
-        "Cross-platform Compatibility",
-        "Offline Access Capabilities",
-        "Push Notifications",
-      ],
-    },
+    "Automated invoices generate",
+    "Create a single invoice for multiple orders/items",
+    "Add discounts, manage customer payments, track due orders",
+    "Secure and customizable invoicing templates",
   ];
 
   return (
-    <section id="key-features" className="section-padding bg-white">
-      <div className="container-custom">
+    <section
+      id="invoicing-system"
+      className="relative min-h-screen bg-white overflow-hidden"
+    >
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="absolute top-1/4 left-6 sm:left-10 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gray-50 rounded-full blur-3xl opacity-60"
+          animate={{ scale: [1, 1.15, 1], x: [0, 30, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-6 sm:right-10 w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-red-50 rounded-full blur-3xl opacity-40"
+          animate={{ scale: [1, 1.2, 1], x: [0, -20, 0] }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Transform Your Workflow With These
-            <span className="text-red-500 block">Key Features</span>
-          </h2>
+          <motion.p
+            className="text-[#FF4757] font-bold tracking-wider mb-3 sm:mb-4"
+            style={{
+              fontSize: "14px",
+              fontFamily: "'Inter', sans-serif",
+              letterSpacing: "0.1em",
+            }}
+          >
+            KEY FEATURES
+          </motion.p>
+          <motion.h2
+            className="text-black font-bold leading-tight max-w-3xl sm:max-w-4xl mx-auto text-2xl sm:text-3xl md:text-4xl lg:text-[44px]"
+            style={{
+              fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+              lineHeight: "1.2",
+            }}
+          >
+            Tools That Make Work Faster & Smarter
+          </motion.h2>
         </motion.div>
 
-        <div className="space-y-20">
-          {features.map((feature, featureIndex) => (
+        {/* Content */}
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
+          {/* Left Image */}
+          <motion.div
+            className="lg:flex-1 w-full max-w-md sm:max-w-lg lg:max-w-2xl order-2 lg:order-1"
+            initial={{ opacity: 0, scale: 0.85, x: -40 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+          >
             <motion.div
-              key={feature.id}
-              className="grid lg:grid-cols-2 gap-12 items-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: featureIndex * 0.05,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, margin: "-100px" }}
+              className="relative"
+              whileHover={{ scale: 1.02, rotateY: -2 }}
+              transition={{ duration: 0.3 }}
+              style={{ perspective: "1000px" }}
             >
+              {/* Glow */}
               <motion.div
-                className={feature.imageFirst ? "" : "lg:order-2"}
-                initial={{ opacity: 0, x: feature.imageFirst ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-100px" }}
+                className="absolute inset-0 bg-gradient-to-br from-gray-200/40 to-red-100/20 blur-2xl sm:blur-3xl rounded-lg transform scale-105"
+                animate={{ opacity: [0.4, 0.6, 0.4] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+
+              {/* Invoice Image */}
+              <motion.div
+                className="relative"
+                initial={{ rotateY: 5 }}
+                whileInView={{ rotateY: 0 }}
+                transition={{ duration: 0.8 }}
               >
-                <motion.img
-                  src={feature.image}
-                  alt={feature.imageAlt}
-                  className="w-full h-auto rounded-lg"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                <img
+                  src="/images/invoice.png"
+                  alt="FlowSuite Smart Invoicing System"
+                  className="w-full h-auto object-contain drop-shadow-2xl"
                 />
               </motion.div>
+
+              {/* Accents */}
               <motion.div
-                className={feature.imageFirst ? "" : "lg:order-1"}
-                initial={{ opacity: 0, x: feature.imageFirst ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <motion.h3
-                  className="text-2xl md:text-3xl font-bold text-gray-900 mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
-                  viewport={{ once: true, margin: "-100px" }}
-                >
-                  {feature.title}
-                  <span className="text-red-500 block">
-                    {feature.titleHighlight}
-                  </span>
-                </motion.h3>
-                <motion.p
-                  className="text-lg text-gray-600 mb-8 leading-relaxed"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
-                  viewport={{ once: true, margin: "-100px" }}
-                >
-                  {feature.description}
-                </motion.p>
-                <motion.ul
-                  className="space-y-3"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5, ease: "easeOut" }}
-                  viewport={{ once: true, margin: "-100px" }}
-                >
-                  {feature.points.map((point, pointIndex) => (
-                    <motion.li
-                      key={pointIndex}
-                      className="flex items-center space-x-3"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        duration: 0.3,
-                        delay: 0.6 + pointIndex * 0.05,
-                        ease: "easeOut",
-                      }}
-                      viewport={{ once: true, margin: "-100px" }}
-                    >
-                      <motion.div
-                        className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center"
-                        whileHover={{ scale: 1.1, rotate: 360 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <svg
-                          className="w-3 h-3 text-red-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </motion.div>
-                      <span className="text-gray-700">{point}</span>
-                    </motion.li>
-                  ))}
-                </motion.ul>
-              </motion.div>
+                className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-16 h-16 sm:w-24 sm:h-24 bg-red-200/30 rounded-full blur-lg sm:blur-xl"
+                animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
+              <motion.div
+                className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 h-20 sm:w-32 sm:h-32 bg-gray-200/40 rounded-full blur-lg sm:blur-xl"
+                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+              />
             </motion.div>
-          ))}
+          </motion.div>
+
+          {/* Right Content */}
+          <motion.div
+            className="lg:flex-1 w-full space-y-6 sm:space-y-8 order-1 lg:order-2 text-center lg:text-left"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7 }}
+          >
+            {/* Section Header */}
+            <div className="space-y-4 max-w-lg mx-auto lg:mx-0">
+              <h3
+                className="text-black font-bold leading-tight text-xl sm:text-2xl md:text-[26px]"
+                style={{
+                  fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
+                  lineHeight: "1.3",
+                }}
+              >
+                Smart Invoicing System
+              </h3>
+              <p
+                className="text-black leading-relaxed text-sm sm:text-base md:text-[16px]"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 400,
+                  lineHeight: "1.7",
+                }}
+              >
+                Streamline billing with our Smart Invoicing system eliminating
+                errors, speeding up payments, and ensuring financial
+                transparency for smooth cash flow and a better customer
+                experience.
+              </p>
+            </div>
+
+            {/* Features */}
+            <div className="space-y-4 sm:space-y-5 pt-2">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-3 justify-start max-w-lg mx-auto lg:mx-0"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{ x: 5 }}
+                >
+                  <motion.div
+                    className="flex-shrink-0 mt-0.5"
+                    whileHover={{ scale: 1.15, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-red-500 stroke-[2.5]" />
+                    </div>
+                  </motion.div>
+                  <p
+                    className="text-black leading-relaxed text-left text-sm sm:text-base md:text-[16px]"
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontWeight: 400,
+                      lineHeight: "1.7",
+                    }}
+                  >
+                    {feature}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 };
 
-export default KeyFeaturesSection;
+export default InvoicingSystemSection;
