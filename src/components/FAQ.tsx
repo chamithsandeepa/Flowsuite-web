@@ -3,7 +3,7 @@ import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
 
 const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(-1); // -1 = all closed initially
 
   const faqs = [
     {
@@ -62,7 +62,6 @@ const FAQSection = () => {
         />
       </motion.div>
 
-
       {/* FAQ Container */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -97,7 +96,7 @@ const FAQSection = () => {
                   className="text-black pr-3 sm:pr-4 text-base sm:text-lg md:text-xl"
                   style={{
                     fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-                    fontWeight: 600,
+                    fontWeight: 400, // changed from 600 to 400 (not bold)
                     lineHeight: "1.4",
                   }}
                 >
