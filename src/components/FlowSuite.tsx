@@ -28,7 +28,7 @@ const FlowSuiteSection = ({}: FlowSuiteSectionProps) => {
   ];
 
   return (
-    <section id="flowsuite" className="relative bg-[#F94049] overflow-hidden">
+    <section className="relative bg-[#F94049] overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

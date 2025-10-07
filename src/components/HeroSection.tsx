@@ -6,11 +6,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   return (
-    <section
-      id="home"
-      className="relative bg-cover bg-center bg-[#FFE4DE] bg-no-repeat overflow-hidden"
-      style={{ paddingTop: 0 }} // remove fixed pt-16
-    >
+    <section className="relative bg-cover bg-center bg-[#FFE4DE] bg-no-repeat overflow-hidden pt-16">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
           {/* Left Text Content */}
@@ -61,7 +57,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             >
               <motion.button
-                onClick={() => scrollToSection("features")}
+                onClick={() => scrollToSection("contact")}
                 className="bg-red-500 hover:bg-red-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg font-semibold transition-colors duration-200 text-center shadow-lg"
                 style={{
                   fontFamily: "'Inter', sans-serif",

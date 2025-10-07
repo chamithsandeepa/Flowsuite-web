@@ -13,7 +13,7 @@ const InvoicingSystemSection = ({}: InvoicingSystemSectionProps) => {
 
   return (
     <section
-      id="invoicing-system"
+      id="features"
       className="relative min-h-screen bg-white overflow-hidden"
     >
       {/* Background decoration */}

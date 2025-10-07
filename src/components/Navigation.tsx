@@ -16,11 +16,10 @@ const Navigation = ({ activeSection, scrollToSection }: NavigationProps) => {
 
   const navItems = [
     { id: "home", label: "Home" },
+    { id: "flowsuite", label: "Flowsuite" },
     { id: "features", label: "Features" },
-    { id: "workflow", label: "Workflow" },
-    { id: "key-features", label: "Solutions" },
-    { id: "plans", label: "Plans" },
-    { id: "contact", label: "Contact" },
+    { id: "pricing", label: "Pricing" },
+    { id: "contact", label: "Contact us" },
   ];
 
   return (
@@ -39,9 +38,6 @@ const Navigation = ({ activeSection, scrollToSection }: NavigationProps) => {
               alt="FlowSuite"
               className="h-8 w-auto"
             />
-            {/* <span className="ml-2 text-xl font-bold text-gray-900">
-              FlowSuite
-            </span> */}
           </div>
 
           {/* Desktop Navigation */}

@@ -9,7 +9,7 @@ const AdvancedPricingSection = () => {
 
   return (
     <section
-      id="advanced-pricing"
+      id="pricing"
       className="relative bg-[#F5F3F0] overflow-hidden min-h-screen"
     >
       {/* Background Decoration */}
