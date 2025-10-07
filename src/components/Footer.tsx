@@ -26,7 +26,7 @@ const FooterSection = ({ scrollToSection }: FooterSectionProps) => {
 
   const navLinks = [
     { text: "Home", id: "home" },
-    { text: "FlowSuite", id: "how-it-works" },
+    { text: "FlowSuite", id: "flowsuite" },
     { text: "Features", id: "features" },
     { text: "Contact Us", id: "contact" },
   ];

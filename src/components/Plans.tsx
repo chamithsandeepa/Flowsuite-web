@@ -152,50 +152,38 @@ const AffordablePlansSection = ({
 
           {/* Right Image */}
           <motion.div
-            className="w-full lg:flex-1 flex items-end justify-center lg:justify-end"
+            className="lg:flex-1 flex justify-center lg:justify-end relative overflow-visible min-w-0"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="w-full lg:flex-1 flex items-end justify-center lg:justify-end"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              className="relative overflow-visible"
+              style={{ width: "150%", maxWidth: "none" }}
+              whileHover={{ scale: 1.04, transition: { duration: 0.3 } }}
             >
-              <motion.div
-                className="relative w-full max-w-8xl" // ⬆️ Much larger container
-                whileHover={{
-                  scale: 1.04, // Slight hover zoom for effect
-                  transition: { duration: 0.3 },
-                }}
-              >
-                <motion.img
-                  src="images/people.png"
-                  alt="Team collaboration"
-                  className="w-[150%] md:w-[160%] lg:w-[180%] h-auto object-contain object-bottom mx-auto -mb-12 lg:-mb-20"
-                  // ⬆️ Increased image scale + moved closer to bottom
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                />
+              <motion.img
+                src="images/people.png"
+                alt="Team collaboration"
+                className="w-full h-auto object-contain object-top -mt-48 lg:-mt-64"
+                style={{ minWidth: "600px" }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              />
 
-                {/* Glow Effect */}
-                <motion.div
-                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[90%] h-40 bg-gradient-to-t from-red-100/40 to-transparent blur-3xl"
-                  animate={{
-                    opacity: [0.3, 0.6, 0.3],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-              </motion.div>
+              {/* Glow Effect */}
+              <motion.div
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[90%] h-40 bg-gradient-to-t from-red-100/40 to-transparent blur-3xl"
+                animate={{ opacity: [0.3, 0.6, 0.3] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
             </motion.div>
           </motion.div>
         </div>

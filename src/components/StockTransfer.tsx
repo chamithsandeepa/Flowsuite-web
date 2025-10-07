@@ -9,6 +9,14 @@ const StockTransferringSection = ({}: StockTransferringSectionProps) => {
     "Real-time updates to prevent shortages",
   ];
 
+  // Scrolling text items
+  const scrollingTexts = [
+    "Fast & flexible stock transfers",
+    "Keeps Stock Accurate",
+    "Auto Updates",
+    "Move Stocks",
+  ];
+
   return (
     <section
       id="stock-transferring"
@@ -101,8 +109,8 @@ const StockTransferringSection = ({}: StockTransferringSectionProps) => {
                   className="flex items-start gap-3 group justify-center lg:justify-start"
                 >
                   <div className="flex-shrink-0 mt-0.5">
-                    <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                      <Check className="w-3.5 h-3.5 text-red-500 stroke-[2.5]" />
+                    <div className="w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 text-orange-500 stroke-[2.5]" />
                     </div>
                   </div>
                   <p
@@ -119,6 +127,60 @@ const StockTransferringSection = ({}: StockTransferringSectionProps) => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* 🔸 Seamless nonstop horizontal scroll */}
+        <div className="mt-6 overflow-hidden relative">
+          <div className="flex w-[200%]">
+            <motion.div
+              className="flex whitespace-nowrap gap-30 w-1/2"
+              animate={{ x: ["0%", "-100%"] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear",
+                duration: 25, // slower and smoother
+              }}
+            >
+              {scrollingTexts.map((text, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 text-black text-lg font-medium"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  <div className="w-5 h-5 rounded-full bg-green-500/100 flex items-center justify-center">
+                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  </div>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Duplicate for seamless loop */}
+            <motion.div
+              className="flex whitespace-nowrap gap-30 w-1/2"
+              animate={{ x: ["0%", "-100%"] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear",
+                duration: 25,
+              }}
+            >
+              {scrollingTexts.map((text, index) => (
+                <div
+                  key={`dup-${index}`}
+                  className="flex items-center gap-2 text-black text-lg font-medium"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  <div className="w-5 h-5 rounded-full bg-green-500/100 flex items-center justify-center">
+                    <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                  </div>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>
